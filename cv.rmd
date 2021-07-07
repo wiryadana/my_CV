@@ -22,7 +22,7 @@ source("cv_printing_functions.r")
 
 # Read in all data and initialize a CV printer object
 CV <- create_CV_object(
-  data_location = "https://docs.google.com/spreadsheets/d/1KCR226rQeE7mWBJtV0saT02kxoshXFjawCXbMQHxKVo/edit#gid=917338460",  
+  data_location = "https://docs.google.com/spreadsheets/d/1vuFA1yuaI81kQIKZxVP3BXSkSCEy3dZxMq4_PzO7lsM/edit?usp=sharing",  
   pdf_mode = params$pdf_mode
 )
 
@@ -54,9 +54,9 @@ datadrivencv::build_network_logo(CV$entries_data)
 
 ```{r}
 if(params$pdf_mode){
-  cat("View this CV online with links at _nickstrayer.me/datadrivencv/_")
+  cat("View this CV online with links at _https://wiryadana.tech/wiryadana_cv/_")
 } else {
-  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/nstrayer/cv/raw/master/strayer_cv.pdf)")
+  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/wiryadana/my_CV/blob/main/wiryadana_cv.pdf)")
 }
 ```
 
@@ -69,7 +69,7 @@ CV %>% print_contact_info()
 
 
 
-Language Skills {#skills}
+Skill {#skills}
 --------------------------------------------------------------------------------
 
 ```{r}
@@ -81,9 +81,9 @@ CV %>% print_skill_bars()
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
-Made with the R package [**pagedown**](https://github.com/rstudio/pagedown). 
+Made with the R & R package [**pagedown**](https://github.com/rstudio/pagedown) & [**datadrivencv**](https://github.com/nstrayer/datadrivencv). 
 
-The source code is available [on github.com/nstrayer/cv](https://github.com/nstrayer/datadrivencv).
+The source code is available [on github.com/wiryadana/my_CV](https://github.com/wiryadana/my_CV).
 
 Last updated on `r Sys.Date()`.
 
@@ -102,7 +102,7 @@ CV %<>% print_text_block("intro")
 
 
 
-Education {data-icon=graduation-cap data-concise=true}
+Pendidikan {data-icon=graduation-cap data-concise=true}
 --------------------------------------------------------------------------------
 
 ```{r}
@@ -111,16 +111,16 @@ CV %<>% print_section('education')
 
 
 
-Research Experience {data-icon=laptop}
+Pelatihan {data-icon=laptop}
 --------------------------------------------------------------------------------
 
 ```{r}
-CV %<>% print_section('research_positions')
+CV %<>% print_section('pelatihan')
 ```
 
 
 
-Industry Experience {data-icon=suitcase}
+Pengalaman Kerja {data-icon=suitcase}
 --------------------------------------------------------------------------------
 
 ::: aside
@@ -135,10 +135,9 @@ CV %<>% print_section('industry_positions')
 
 <!-- These breaks just force a new page so section doesnt get cut off -->
 <br>
-<br>
-<br>
 
-Teaching Experience {data-icon=chalkboard-teacher}
+
+Pengalaman Mengajar {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
 
 ::: aside
@@ -152,8 +151,7 @@ CV %<>% print_section('teaching_positions')
 ```
 
 
-
-Selected Data Science Writing {data-icon=chart-line}
+Penghargaan {data-icon=chart-line}
 --------------------------------------------------------------------------------
 
 ::: aside
@@ -163,40 +161,30 @@ CV %<>% print_text_block('data_science_writing_aside')
 :::
 
 ```{r}
-CV %<>% print_section('data_science_writings')
+CV %<>% print_section('awards')
 ```
 
 
 
-Selected Press (About)  {data-icon=newspaper}
+Pengabdian Masyarakat  {data-icon=newspaper}
 --------------------------------------------------------------------------------
 
 ```{r}
-CV %<>% print_section('about_me_press')
+CV %<>% print_section('pengabdian_masyarakat')
 ```
 
 
 <br>
-<br>
 
 
-Selected Press (By)  {data-icon=newspaper}
---------------------------------------------------------------------------------
-
-```{r}
-CV %<>% print_section('by_me_press')
-```
-
-
-
-Selected Publications, Posters, and Talks {data-icon=book}
+Publikasi Ilmiah {data-icon=book}
 --------------------------------------------------------------------------------
 
 ```{r}
 CV %<>% print_section('academic_articles')
 ```
 
-
+\newpage
 
 ```{r}
 CV %<>% print_links()
