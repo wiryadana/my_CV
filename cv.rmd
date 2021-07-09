@@ -48,7 +48,11 @@ Aside
 ```{r}
 # Build interactive network of positions colored by section
 # and connected if they occurred in the same year
-datadrivencv::build_network_logo(CV$entries_data)
+# datadrivencv::build_network_logo(CV$entries_data)
+```
+
+```{r foto, echo=FALSE}
+knitr::include_graphics("foto.png")
 ```
 
 
@@ -185,6 +189,14 @@ CV %<>% print_section('academic_articles')
 ```
 
 \newpage
+
+::: aside
+```{r}
+# Build interactive network of positions colored by section
+# and connected if they occurred in the same year
+datadrivencv::build_network_logo(CV$entries_data)
+```
+:::
 
 ```{r}
 CV %<>% print_links()
