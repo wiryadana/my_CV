@@ -54,13 +54,13 @@ datadrivencv::build_network_logo(CV$entries_data)
 
 ```{r}
 if(params$pdf_mode){
-  cat("View this CV online with links at _https://wiryadana.tech/wiryadana_cv/cv.html")
+  cat("CV dapat diakses online pada _https://wiryadana.tech/wiryadana_cv/cv.html")
 } else {
   cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/wiryadana/my_CV/blob/main/wiryadana_cv.pdf)")
 }
 ```
 
-Contact {#contact}
+Kontak {#contact}
 --------------------------------------------------------------------------------
 
 ```{r}
@@ -69,7 +69,7 @@ CV %>% print_contact_info()
 
 
 
-Skill {#skills}
+Skill lain {#skills}
 --------------------------------------------------------------------------------
 
 ```{r}
@@ -81,11 +81,11 @@ CV %>% print_skill_bars()
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
-Made with the R & R package [**pagedown**](https://github.com/rstudio/pagedown) & [**datadrivencv**](https://github.com/nstrayer/datadrivencv). 
+CV dibuat dengan R & R package [**pagedown**](https://github.com/rstudio/pagedown) & [**datadrivencv**](https://github.com/nstrayer/datadrivencv). 
 
-The source code is available [on github.com/wiryadana/my_CV](https://github.com/wiryadana/my_CV).
+Kode dapat diakses pada [github.com/wiryadana/my_CV](https://github.com/wiryadana/my_CV).
 
-Last updated on `r Sys.Date()`.
+Diperbaharui pada `r Sys.Date()`.
 
 
 
