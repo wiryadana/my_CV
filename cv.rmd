@@ -55,14 +55,10 @@ Aside
 knitr::include_graphics("foto.png")
 ```
 
-
-```{r}
-if(params$pdf_mode){
-  cat("CV dapat diakses online pada _https://wiryadana.tech/wiryadana_cv/cv.html")
-} else {
-  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/wiryadana/my_CV/blob/main/wiryadana_cv.pdf)")
-}
-```
+* **dr. Kadek Adit Wiryadana**
+* Usia `r round(((Sys.Date() - as.Date("1996-06-02"))/365),digits=0)` Tahun
+* Lahir di Singaraja, 2 Juni 1996
+* Alamat: Jalan Mayor Metra Gg IV no. 2 Liligundi, Singaraja
 
 Kontak {#contact}
 --------------------------------------------------------------------------------
@@ -70,8 +66,6 @@ Kontak {#contact}
 ```{r}
 CV %>% print_contact_info()
 ```
-
-
 
 Skill lain {#skills}
 --------------------------------------------------------------------------------
@@ -85,13 +79,15 @@ CV %>% print_skill_bars()
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
-CV dibuat dengan R & R package [**pagedown**](https://github.com/rstudio/pagedown) & [**datadrivencv**](https://github.com/nstrayer/datadrivencv). 
-
-Kode dapat diakses pada [github.com/wiryadana/my_CV](https://github.com/wiryadana/my_CV).
-
+CV dibuat dengan R. Kode dapat diakses pada [github](https://github.com/wiryadana/my_CV).
 Diperbaharui pada `r Sys.Date()`.
-
-
+```{r}
+if(params$pdf_mode){
+  cat("CV dapat diakses online pada _https://wiryadana.tech/wiryadana_cv/cv.html")
+} else {
+  cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/wiryadana/my_CV/blob/main/wiryadana_cv.pdf)")
+}
+```
 
 Main
 ================================================================================
