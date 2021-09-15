@@ -22,7 +22,7 @@ source("cv_printing_functions.r")
 
 # Read in all data and initialize a CV printer object
 CV <- create_CV_object(
-  data_location = "https://docs.google.com/spreadsheets/d/1vuFA1yuaI81kQIKZxVP3BXSkSCEy3dZxMq4_PzO7lsM/edit?usp=sharing",  
+  data_location = "https://docs.google.com/spreadsheets/d/1QBk5tWxkVf2n-vr2u2ysb9GxS4ljc1bMuEHxtkk0bqA/edit#gid=917338460",  
   pdf_mode = params$pdf_mode
 )
 
@@ -111,7 +111,7 @@ CV %<>% print_section('education')
 
 
 
-Pelatihan {data-icon=laptop}
+Pelatihan dan Sertifikasi {data-icon=laptop}
 --------------------------------------------------------------------------------
 
 ```{r}
@@ -134,13 +134,14 @@ CV %<>% print_section('industry_positions')
 ```
 
 <!-- These breaks just force a new page so section doesnt get cut off -->
+\newpage
 
 Pengalaman Mengajar {data-icon=chalkboard-teacher}
 --------------------------------------------------------------------------------
 
 ::: aside
 ```{r}
-CV %<>% print_text_block('teaching_experience_aside')
+# CV %<>% print_text_block('teaching_experience_aside')
 ```
 :::
 
@@ -154,7 +155,7 @@ Penghargaan {data-icon=chart-line}
 
 ::: aside
 ```{r}
-CV %<>% print_text_block('data_science_writing_aside')
+# CV %<>% print_text_block('data_science_writing_aside')
 ```
 :::
 
