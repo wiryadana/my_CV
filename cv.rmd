@@ -22,7 +22,8 @@ source("cv_printing_functions.r")
 
 # Read in all data and initialize a CV printer object
 CV <- create_CV_object(
-  data_location = "https://docs.google.com/spreadsheets/d/1QBk5tWxkVf2n-vr2u2ysb9GxS4ljc1bMuEHxtkk0bqA/edit#gid=917338460",  
+  #data_location = "https://docs.google.com/spreadsheets/d/1QBk5tWxkVf2n-vr2u2ysb9GxS4ljc1bMuEHxtkk0bqA/edit#gid=917338460",
+  data_location = "https://docs.google.com/spreadsheets/d/1vuFA1yuaI81kQIKZxVP3BXSkSCEy3dZxMq4_PzO7lsM/edit#gid=917338460",
   pdf_mode = params$pdf_mode
 )
 
@@ -79,11 +80,21 @@ CV %>% print_skill_bars()
 Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
-CV dibuat dengan R. Kode dapat diakses pada [github](https://github.com/wiryadana/my_CV).
-Diperbaharui pada `r Sys.Date()`.
-```{r}
+```{r , eval=FALSE}
+jpeg("qr.jpg", width = 200, height = 200, units = "px")
+
+qr <- plot(qrcode::qr_code("https://wiryadana.github.io/my_CV/"))
+
+dev.off()
+```
+
+```{r qrcode, echo=FALSE}
+knitr::include_graphics("qr.jpg")
+```
+
+```{r eval=F}
 if(params$pdf_mode){
-  cat("CV dapat diakses online pada _https://wiryadana.tech/wiryadana_cv/cv.html")
+  cat(" dapat diakses online pada _https://wiryadana.github.io/my_CV/")
 } else {
   cat("[<i class='fas fa-download'></i> Download a PDF of this CV](https://github.com/wiryadana/my_CV/blob/main/wiryadana_cv.pdf)")
 }
@@ -125,7 +136,7 @@ Pengalaman Kerja {data-icon=suitcase}
 
 ::: aside
 ```{r}
-CV %<>% print_text_block('industy_experience_aside')
+#CV %<>% print_text_block('industy_experience_aside')
 ```
 :::
 
@@ -196,4 +207,9 @@ CV %<>% print_section('academic_articles')
 ```{r}
 CV %<>% print_links()
 ```
+
+```{bash}
+cp cv.html index.html
+```
+
 
