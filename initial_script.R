@@ -3,7 +3,7 @@ use_datadriven_cv(
   full_name = "Kadek Adit Wiryadana",
   data_location = "https://docs.google.com/spreadsheets/d/1vuFA1yuaI81kQIKZxVP3BXSkSCEy3dZxMq4_PzO7lsM/edit#gid=917338460",
   pdf_location = "https://github.com/wiryadana/my_CV/blob/main/wiryadana_cv.pdf",
-  html_location = "https://wiryadana.tech/wiryadana_cv/",
+  html_location = "https://wiryadana.github.io/my_CV/",
   source_location = "https://github.com/wiryadana/my_CV",
   use_network_logo = TRUE
 )
