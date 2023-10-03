@@ -81,7 +81,7 @@ Disclaimer {#disclaimer}
 --------------------------------------------------------------------------------
 
 ```{r , eval=FALSE}
-jpeg("qr.jpg", width = 200, height = 200, units = "px")
+jpeg("qr.jpg", width = 100, height = 100, units = "px")
 
 qr <- plot(qrcode::qr_code("https://wiryadana.github.io/my_CV/"))
 
